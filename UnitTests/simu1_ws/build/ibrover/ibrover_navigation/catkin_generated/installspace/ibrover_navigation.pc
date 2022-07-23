@@ -1,0 +1,8 @@
+prefix=/home/franco/IBTESIS/ibrover/UnitTests/simu1_ws/install
+
+Name: ibrover_navigation
+Description: Description of ibrover_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

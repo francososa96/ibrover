@@ -1,0 +1,8 @@
+prefix=/home/franco/IBTESIS/ibrover/UnitTests/simu1_ws/devel
+
+Name: ibrover_description
+Description: Description of ibrover_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

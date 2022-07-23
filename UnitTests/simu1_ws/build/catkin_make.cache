@@ -1,0 +1,2 @@
+ibrover/differential_drive:ibrover/ibrover_description:ibrover/ibrover_navigation:ibrover/slam_gmapping/gmapping:ibrover/slam_gmapping/slam_gmapping:ibrover/ydlidar_ros
+-DCATKIN_DEVEL_PREFIX=/home/franco/IBTESIS/ibrover/UnitTests/simu1_ws/devel -DCMAKE_INSTALL_PREFIX=/home/franco/IBTESIS/ibrover/UnitTests/simu1_ws/install -G Unix Makefiles

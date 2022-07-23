@@ -1,0 +1,17 @@
+# Mapping:
+
+1) cd ibrover_ws
+2) source ~/ibrover_ws/devel/setup.bash
+3) roslaunch ibrover_description gazebo.launch
+4) roslaunch gmapping mapping.launch
+5) rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+6) rviz ( Enter the configuration in ibrover_ws/src/ibrover/Rviz/ibrover.rviz)
+7) rosrun map_server map_saver -f newmap (save the map into ibrover_description/maps)
+
+# Navigation:
+
+1) cd ibrover_ws
+2) source ~/ibrover_ws/devel/setup.bash
+3) roslaunch ibrover_description gazebo.launch
+4) roslaunch ibrover_navigation move_base.launch
+5) rviz ( Enter the configuration in ibrover_ws/src/ibrover/Rviz/ibrover.rviz)

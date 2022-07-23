@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+<robot name="ibrover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find ibrover_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find ibrover_description)/urdf/ibrover.trans" />
+<xacro:include filename="$(find ibrover_description)/urdf/ibrover.gazebo" />
+<xacro:include filename="$(find ibrover_description)/urdf/ibrover_gazebo_plugins.xacro" />
+
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0010006026823889483 0.12028727978882328 0.12193836667442243"/>
+    <mass value="4.885824520670889"/>
+    <inertia ixx="0.079033" ixy="0.000137" ixz="-9.3e-05" iyy="0.132244" iyz="0.001375" izz="0.185577"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Yellow"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.030005327253976033 4.830866419114344e-07 -1.969358994213799e-07"/>
+    <mass value="0.690742595502873"/>
+    <inertia ixx="0.002398" ixy="-0.0" ixz="-0.0" iyy="0.001512" iyz="-0.0" izz="0.001512"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1951 -0.276835 -0.073326"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/wheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1951 -0.276835 -0.073326"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/wheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03000471658824555 4.854538519505347e-07 -2.0335312773955838e-07"/>
+    <mass value="0.6907425955028664"/>
+    <inertia ixx="0.002398" ixy="-0.0" ixz="-0.0" iyy="0.001512" iyz="-0.0" izz="0.001512"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.195457 -0.278135 -0.073326"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/wheel3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.195457 -0.278135 -0.073326"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/wheel3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.030004716588238278 -4.5081524318105193e-07 -2.033531281836476e-07"/>
+    <mass value="0.6907425955028617"/>
+    <inertia ixx="0.002398" ixy="-0.0" ixz="-0.0" iyy="0.001512" iyz="-0.0" izz="0.001512"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.195457 0.026582 -0.073326"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/wheel4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.195457 0.026582 -0.073326"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/wheel4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03000532725397015 4.746537040078991e-07 -2.2177025847669452e-07"/>
+    <mass value="0.690742595502873"/>
+    <inertia ixx="0.002398" ixy="-0.0" ixz="0.0" iyy="0.001512" iyz="0.0" izz="0.001512"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1951 0.027883 -0.073326"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/wheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1951 0.027883 -0.073326"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/wheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.010000398386117045 0.018836440384082248 0.013242579549263306"/>
+    <mass value="0.031808836746618295"/>
+    <inertia ixx="1.2e-05" ixy="-0.0" ixz="0.0" iyy="1.4e-05" iyz="-0.0" izz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.00803 -0.212877 -0.170509"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.00803 -0.212877 -0.170509"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="laser_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.027672379834037416 -0.04048573420222906 -0.00014908081962347608"/>
+    <mass value="0.0740228100162138"/>
+    <inertia ixx="6.2e-05" ixy="0.0" ixz="0.0" iyy="3.1e-05" iyz="-6e-06" izz="7.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.025191 -0.18386 -0.21978"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/laser_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.025191 -0.18386 -0.21978"/>
+    <geometry>
+      <mesh filename="package://ibrover_description/meshes/laser_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev1" type="continuous">
+  <origin rpy="0 0 0" xyz="0.1951 0.276835 0.073326"/>
+  <parent link="base_link"/>
+  <child link="wheel1_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev3" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.195457 0.278135 0.073326"/>
+  <parent link="base_link"/>
+  <child link="wheel3_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev4" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.195457 -0.026582 0.073326"/>
+  <parent link="base_link"/>
+  <child link="wheel4_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev2" type="continuous">
+  <origin rpy="0 0 0" xyz="0.1951 -0.027883 0.073326"/>
+  <parent link="base_link"/>
+  <child link="wheel2_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Jcam" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.00803 0.212877 0.170509"/>
+  <parent link="base_link"/>
+  <child link="camera_link_1"/>
+</joint>
+
+<joint name="Jlaser" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.025191 0.18386 0.21978"/>
+  <parent link="base_link"/>
+  <child link="laser_link_1"/>
+</joint>
+
+</robot>
